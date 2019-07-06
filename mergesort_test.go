@@ -14,7 +14,6 @@ func TestMerge(t *testing.T) {
 		wantSorted     []int
 		wantInversions int
 	}{
-		// TODO: test cases
 		{name: "empty", inLeft: []int{}, inRight: []int{}, wantSorted: []int{}, wantInversions: 0},
 		{name: "two single", inLeft: []int{0}, inRight: []int{1}, wantSorted: []int{0, 1}, wantInversions: 0},
 		{name: "single inverted", inLeft: []int{1}, inRight: []int{0}, wantSorted: []int{0, 1}, wantInversions: 1},
@@ -42,7 +41,6 @@ func TestMergeSort(t *testing.T) {
 		input          []int
 		wantInversions int
 	}{
-		// TODO: test cases
 		{name: "empty", input: []int{}, wantInversions: 0},
 		{name: "two single", input: []int{0}, wantInversions: 0},
 		{name: "single", input: []int{1}, wantInversions: 0},
