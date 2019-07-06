@@ -53,7 +53,7 @@ func TestMergeSort(t *testing.T) {
 	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			gotSorted, gotInversions := mergeSort(test.input)
+			gotSorted, gotInversions := MergeSort(test.input)
 			sort.Ints(test.input)
 			if len(test.input) > 0 && !reflect.DeepEqual(gotSorted, test.input) {
 				t.Errorf("wrong sorting. got %v, wanted %v", gotSorted, test.input)

@@ -23,19 +23,19 @@ func merge(l, r []int) ([]int, int) {
 }
 
 // Use mergesort to get the sorted array and number of inversions.
-func mergeSort(arr []int) ([]int, int) {
+func MergeSort(arr []int) ([]int, int) {
 	if len(arr) < 2 {
 		return arr, 0
 	}
-	l, li := mergeSort(arr[:len(arr)/2])
-	r, ri := mergeSort(arr[len(arr)/2:])
+	l, li := MergeSort(arr[:len(arr)/2])
+	r, ri := MergeSort(arr[len(arr)/2:])
 	rv, ti := merge(l, r)
 	return rv, li + ri + ti
 }
 
 func main() {
 	a := []int{2, 4, 1, 0}
-	sorted, inversions := mergeSort(a)
+	sorted, inversions := MergeSort(a)
 	fmt.Println(sorted)
 	fmt.Println(inversions)
 }
